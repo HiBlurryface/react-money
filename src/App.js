@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from 'assets/styles/Main.module.scss';
+import 'assets/styles/reset.scss'
+import 'assets/styles/fonts.scss'
+import Category from 'components/UI/category/Category';
+import Header from 'components/ordinary/header/Header';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
+import Expenses from 'components/smart/expenses/Expenses';
+import Gains from 'components/smart/gains/Gains';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [mode, setMode] = useState('expenses');
+  return <>
+    <Header />
+    {mode === 'expenses' && <Expenses setMode={setMode}/>}
+    {mode === 'gains' && <Gains setMode={setMode}/>}
+  </>
 }
 
 export default App;

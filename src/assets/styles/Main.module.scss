@@ -1,0 +1,52 @@
+body {
+    overflow: hidden;
+    overflow-y: scroll;
+    font-family: 'Heebo';
+    & > div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+.diagramm {
+    margin: 0px auto;
+    width: 240px;
+    height: 240px;
+    border-radius: 100%;
+    border: 6px solid #fff;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        font-size: 21px;
+        line-height: 31px;
+        color: #fff;
+    }
+    &__amount {
+        font-size: 28px;
+        line-height: 38px;
+    }
+    &__secondaryAmmount {
+        font-size: 21px;
+        line-height: 31px;
+    }
+}
+.wrapper {
+    background: #2a3139;
+    height: 100%;
+    padding-top: 48px;
+}
+.container {
+    max-width: 660px;
+    margin: 0px auto;
+    padding: 0 20px;
+}
+.categories {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 0;
+}
